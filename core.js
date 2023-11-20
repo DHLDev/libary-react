@@ -25,7 +25,7 @@ export function CreateStore(reducer){
                         return component => (props,...args) => 
                               component(Object.assign({},props,selector(state),...args))
                   },
-                  dispacth:function(action,...args){
+                  dispacth(action,...args){
                         state = reducer(state,action,args)
                         render()
                   }
